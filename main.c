@@ -28,4 +28,4 @@ int	main(void)
 	mlx_destroy_display(data.mlx_ptr);
 	free(data.mlx_ptr);
 }
-//gcc main.c minilibx-linux/libmlx_Linux.a -lX11 -lXext
+//gcc *.c minilibx-linux/libmlx_Linux.a -lX11 -lXext && ./a.out
