@@ -6,7 +6,7 @@
 # include <fcntl.h>
 # include <unistd.h>
 
-int	checksize();
+int	checksize(char *map);
 
 
 
