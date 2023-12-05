@@ -11,5 +11,7 @@ size_t	checksize(char *map, size_t *colone);
 char **createarea(int ligne, size_t colone);
 char **inputarea(char *map, int ligne, size_t colone);
 
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+
 
 #endif
