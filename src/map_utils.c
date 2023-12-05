@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 10:21:07 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/05 10:24:22 by lbehr            ###   ########.fr       */
+/*   Created: 2023/12/05 10:54:08 by lbehr             #+#    #+#             */
+/*   Updated: 2023/12/05 10:55:39 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,17 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		i++;
 	}
 	return (dest);
+}
+
+void	freetab(char **tab, int ligne)
+{
+	int	i;
+
+	i = 0;
+	while (i < ligne)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }
