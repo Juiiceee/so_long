@@ -7,11 +7,11 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "test.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
 				"src/*.c",
-				" -Wall",
+				"-Wall",
 				"-Werror",
 				"-Wextra"
             ],

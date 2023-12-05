@@ -1,36 +1,22 @@
 #include "../Include/map.h"
 #include "../Include/get_next_line.h"
 
-size_t	checksize(char *map, size_t *colone)
+int		checkmur(char **tab, int ligne, int colone)
 {
-	int		fd;
-	char	*str;
-	int		ligne;
+	int	i;
+	int	j;
 
-	ligne = 0;
-	fd = open(map, O_RDONLY);
-	str = get_next_line(fd);
-	*colone = ft_strlen(str);
-	while (1)
+	i = 0;
+	while (i < ligne)
 	{
-		ligne++;
-		free(str);
-		str = get_next_line(fd);
-		if (!str || *colone != ft_strlen(str))
-			break;
+		j = 0;
+		while (j < colone)
+		{
+			if (tab[0][j] != 'M' || tab[ligne - 1][j] != 'M' || tab[i][0] != 'M' || tab[i][colone - 1] != 'M')
+				return (0);
+			j++;
+		}
+		i++;
 	}
-	close(fd);
-	if (*colone == (ft_strlen(str) - 1) && !str)
-	{
-		free(str);
-		return (-1);
-	}
-	(*colone)--;
-	free(str);
-	return (ligne + 1);
+	return (1);
 }
-
-/*int	checkborder()
-{
-
-}*/

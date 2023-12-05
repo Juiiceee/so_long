@@ -1,17 +1,13 @@
 #ifndef MAP_H
 # define MAP_H
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include "../Include/get_next_line.h"
+# include "global.h"
 
-size_t	checksize(char *map, size_t *colone);
+size_t	repsize(char *map, size_t *colone);
+int		checksize(int ligne, size_t colone);
+int		checkmur(char **tab, int ligne, int colone);
+
 char **createarea(int ligne, size_t colone);
 char **inputarea(char *map, int ligne, size_t colone);
-
-void	freetab(char **tab, int ligne);
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
 
 #endif

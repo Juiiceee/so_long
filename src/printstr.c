@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   printstr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 13:40:30 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/05 14:26:12 by lbehr            ###   ########.fr       */
+/*   Created: 2023/11/16 15:04:30 by lbehr             #+#    #+#             */
+/*   Updated: 2023/12/05 15:39:34 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../Include/ft_printf.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
+int	ft_putstr(char *s)
+{
+	if (!s)
+		return (write(1, "(null)", 6));
+	return (write(1, s, (int)ft_strlen(s)));
+}
 
-# include <stdlib.h>
-# include <unistd.h>
-
-char	*get_next_line(int fd);
-
-void	*ft_calloc(size_t nmemb, size_t size);
-void	ft_bzero(void *s, size_t n);
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-
-#endif
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}

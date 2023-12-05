@@ -6,11 +6,11 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:54:08 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/05 10:55:39 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/05 15:41:39 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Include/map.h"
+#include "../Include/utils.h"
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -41,4 +41,11 @@ void	freetab(char **tab, int ligne)
 		i++;
 	}
 	free(tab);
+}
+
+int		error(char *text)
+{
+	write (2, "Error\n", 6);
+	write(2,text,ft_strlen(text));
+	return (0);
 }
