@@ -1,34 +1,44 @@
 #include "../Include/map.h"
 
+size_t strlenno(char *str)
+{
+	size_t	i;
+
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i] && str[i] != '\n')
+		i++;
+	return (i);
+}
+
 size_t	repsize(char *map, size_t *colone)
 {
 	int		fd;
 	char	*str;
 	int		ligne;
+	int		test;
 
 	ligne = 0;
+	test = 0;
 	fd = open(map, O_RDONLY);
 	str = get_next_line(fd);
-	*colone = ft_strlen(str);
+	*colone =strlenno(str);
 	while (1)
 	{
 		ligne++;
 		free(str);
 		str = get_next_line(fd);
-		if (!str || *colone != ft_strlen(str))
+		if (*colone != strlenno(str) && str)
+			test = 1;
+		if (!str)
 			break;
 	}
 	close(fd);
-	int	test = ft_strlen(str);
-	(void)test;
-	if ((*colone - 1) == ft_strlen(str) && str)
-	{
-		free(str);
-		return (-1);
-	}
-	(*colone)--;
+	if (test == 1)
+		return (freereturn(str));
 	free(str);
-	return (ligne + 1);
+	return (ligne);
 }
 
 char **createarea(int ligne, size_t colone)
