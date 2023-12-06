@@ -1,7 +1,7 @@
 #include "../Include/map.h"
 #include "../Include/get_next_line.h"
 
-int		checkmur(char **tab, int ligne, int colone)
+int	checkmur(char **tab, int ligne, int colone)
 {
 	int	i;
 	int	j;
@@ -19,4 +19,8 @@ int		checkmur(char **tab, int ligne, int colone)
 		i++;
 	}
 	return (1);
+}
+int	checkitem(char **tab, int ligne, int colone)
+{
+	
 }
