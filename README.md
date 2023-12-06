@@ -1,7 +1,8 @@
 # so_long
 ## Input Map
 - W = Wall
+- 0 = position vide
 - S = Sortie
-- M = Morty
-- R = Rick
-- C = Collectible
+- F = Feca
+- R = Roublard
+- D = Dofus

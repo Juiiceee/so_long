@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:54:08 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/06 13:21:39 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/06 16:58:44 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int	error(char *text)
 {
 	write (2, "Error\n", 6);
 	write(2,text,ft_strlen(text));
+	write (2, "\n", 1);
 	return (0);
 }
 

@@ -10,4 +10,10 @@
 # include "map.h"
 //# include "ft_printf.h"
 
+typedef enum e_bool
+{
+	False,
+	True
+}	t_bool;
+
 #endif
