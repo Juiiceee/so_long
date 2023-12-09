@@ -67,7 +67,8 @@ int	checkDofus(t_game *game)
 		}
 		i++;
 	}
-	return ((dofus > 0) * dofus);
+	game->game_obj.nbdofus = dofus;
+	return (dofus > 0);
 }
 
 int	checkRoublard(t_game *game)
