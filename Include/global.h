@@ -1,7 +1,6 @@
 #ifndef GLOBAL_H
 # define GLOBAL_H
 
-# include "minilibx-linux/mlx.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <fcntl.h>
@@ -9,6 +8,7 @@
 # include "get_next_line.h"
 # include "utils.h"
 # include "map.h"
+# include "graphique.h"
 //# include "ft_printf.h"
 
 typedef enum e_bool
@@ -17,7 +17,7 @@ typedef enum e_bool
 	True
 }	t_bool;
 
-typedef	struct s_game_chara
+/*typedef	struct s_game_chara
 {
 	void	*fecaface;
 	void	*fecadroite;
@@ -50,6 +50,6 @@ typedef struct s_game
 	t_game_mesure	game_mesure;
 	char			**area;
 	t_game_obj		game_obj;
-}	t_game;
+}	t_game;*/
 
 #endif

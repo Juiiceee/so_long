@@ -2,7 +2,8 @@
 # define GRAPHIQUE_H
 
 //# include "global.h"
-
+# include "minilibx-linux/mlx.h"
+# include <stddef.h>
 typedef	struct s_game_chara
 {
 	void	*fecaface;
