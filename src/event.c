@@ -24,3 +24,8 @@ int	key(int keycode, t_game *game)
 		freeall(game);
 	return (0);
 }
+int	closecross(t_game *game)
+{
+	freeall(game);
+	return (0);
+}

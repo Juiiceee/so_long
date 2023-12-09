@@ -61,5 +61,6 @@ void	freetab(char **area, int ligne);
 
 //event.c
 int	key(int keycode, t_game *game);
+int	closecross(t_game *game);
 
 #endif
