@@ -1,9 +1,8 @@
 #ifndef GRAPHIQUE_H
 # define GRAPHIQUE_H
 
-//# include "global.h"
 # include "minilibx-linux/mlx.h"
-# include <stddef.h>
+# include <stdlib.h>
 typedef	struct s_game_chara
 {
 	void	*fecaface;
@@ -48,6 +47,14 @@ void	filltexturefeca(t_game game);
 
 //graphique.c
 void	fillalltexture(t_game game);
+void	calculmap(int	ligne, int colonne, int	*width, int	*height);
+void	settexture(t_game *game);
+int		game_init(t_game *game);
+
+//graphiqueutils.c
+void	freeall(t_game *game);
+void	destroytexture(t_game *game);
+void	freetab(char **area, int ligne);
 
 
 #endif
