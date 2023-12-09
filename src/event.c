@@ -3,7 +3,7 @@
 int	key(int keycode, t_game *game)
 {
 	if (keycode == XK_Up || keycode == XK_w)
-		printf("UP\n");
+		printf("x = %d et y = %d\n", game->game_pos.x, game->game_pos.y);
 	else if(keycode == XK_Down || keycode == XK_s)
 		printf("DOWN\n");
 	else if (keycode == XK_Left || keycode == XK_a)
