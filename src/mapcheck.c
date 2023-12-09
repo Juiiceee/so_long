@@ -1,17 +1,17 @@
 #include "../Include/map.h"
 
-int	checkmur(char **area, int ligne, int colonne)
+int	checkmur(t_game *game)
 {
 	int	i;
-	int	j;
+	size_t	j;
 
 	i = 0;
-	while (i < ligne)
+	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
-		while (j < colonne)
+		while (j < game->game_mesure.colonne)
 		{
-			if (area[0][j] != 'W' || area[ligne - 1][j] != 'W' || area[i][0] != 'W' || area[i][colonne - 1] != 'W')
+			if (game->area[0][j] != 'W' || game->area[game->game_mesure.ligne - 1][j] != 'W' || game->area[i][0] != 'W' || game->area[i][game->game_mesure.colonne - 1] != 'W')
 				return (0);
 			j++;
 		}
@@ -19,18 +19,18 @@ int	checkmur(char **area, int ligne, int colonne)
 	}
 	return (1);
 }
-int	checkall(char **area, int ligne, int colonne)
+int	checkall(t_game *game)
 {
 	t_bool	good;
 
 	good = True;
-	if (!checkmur(area, ligne, colonne))
+	if (!checkmur(game))
 		good = error("Mur error");
-	if (!checkFeca(area, ligne, colonne))
+	if (!checkFeca(game))
 		good = error("Position depart error");
-	if (!checkSortie(area, ligne, colonne))
+	if (!checkSortie(game))
 		good = error("Sortie Error");
-	if (!checkDofus(area, ligne, colonne))
+	if (!checkDofus(game))
 		good = error("Dofus error");
-	return (good * checkDofus(area, ligne, colonne));
+	return (good * checkDofus(game));
 }

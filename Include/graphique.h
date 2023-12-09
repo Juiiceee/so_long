@@ -14,6 +14,13 @@
 # define XK_Right	0xff53
 # define XK_Down	0xff54
 # define XK_Escape	0xff1b
+
+typedef	struct s_game_pos
+{
+	int	x;
+	int	y;
+}	t_game_pos;
+
 typedef	struct s_game_chara
 {
 	void	*fecaface;
@@ -47,6 +54,7 @@ typedef struct s_game
 	t_game_mesure	game_mesure;
 	char			**area;
 	t_game_obj		game_obj;
+	t_game_pos		game_pos;
 }	t_game;
 
 //texture.c
@@ -72,5 +80,6 @@ void	freetab(char **area, int ligne);
 //event.c
 int	key(int keycode, t_game *game);
 int	closecross(t_game *game);
+int	iswall(char c);
 
 #endif

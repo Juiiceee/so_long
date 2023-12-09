@@ -1,19 +1,19 @@
 #include "../Include/map.h"
 
-int	checkSortie(char **area, int ligne, int colonne)
+int	checkSortie(t_game *game)
 {
-	int	i;
-	int	j;
-	int	sortie;
+	int		i;
+	size_t	j;
+	int		sortie;
 
 	i = 0;
 	sortie = 0;
-	while (i < ligne)
+	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
-		while (j < colonne)
+		while (j < game->game_mesure.colonne)
 		{
-			if (area[i][j] == 'S')
+			if (game->area[i][j] == 'S')
 				sortie++;
 			j++;
 		}
@@ -22,21 +22,23 @@ int	checkSortie(char **area, int ligne, int colonne)
 	return (sortie == 1);
 }
 
-int	checkFeca(char **area, int ligne, int colonne)
+int	checkFeca(t_game *game)
 {
 	int	i;
-	int	j;
+	size_t	j;
 	int	feca;
 
 	i = 0;
 	feca = 0;
-	while (i < ligne)
+	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
-		while (j < colonne)
+		while (j < game->game_mesure.colonne)
 		{
-			if (area[i][j] == 'F')
+			if (game->area[i][j] == 'F')
+			{
 				feca++;
+			}
 			j++;
 		}
 		i++;
@@ -44,20 +46,20 @@ int	checkFeca(char **area, int ligne, int colonne)
 	return (feca == 1);
 }
 
-int	checkDofus(char **area, int ligne, int colonne)
+int	checkDofus(t_game *game)
 {
 	int	i;
-	int	j;
+	size_t	j;
 	int	dofus;
 
 	i = 0;
 	dofus = 0;
-	while (i < ligne)
+	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
-		while (j < colonne)
+		while (j < game->game_mesure.colonne)
 		{
-			if (area[i][j] == 'D')
+			if (game->area[i][j] == 'D')
 				dofus++;
 			j++;
 		}
@@ -66,20 +68,20 @@ int	checkDofus(char **area, int ligne, int colonne)
 	return ((dofus > 0) * dofus);
 }
 
-int	checkRoublard(char **area, int ligne, int colonne)
+int	checkRoublard(t_game *game)
 {
 	int	i;
-	int	j;
+	size_t	j;
 	int	roublard;
 
 	i = 0;
 	roublard = 0;
-	while (i < ligne)
+	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
-		while (j < colonne)
+		while (j < game->game_mesure.colonne)
 		{
-			if (area[i][j] == 'R')
+			if (game->area[i][j] == 'R')
 				roublard++;
 			j++;
 		}

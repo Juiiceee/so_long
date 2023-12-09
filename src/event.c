@@ -19,3 +19,8 @@ int	closecross(t_game *game)
 	freeall(game);
 	return (0);
 }
+
+int	iswall(char c)
+{
+	return (c == 'W');
+}

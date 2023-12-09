@@ -8,7 +8,7 @@ int main(void) {
 	if (game.game_mesure.ligne < 0)
 		return (error("La saisie n'est pas un rectangle"));
 	game.area = inputarea("map.ber", game.game_mesure.ligne, game.game_mesure.colonne);
-	if (!checkall(game.area, game.game_mesure.ligne, game.game_mesure.colonne))
+	if (!checkall(&game))
 	{
 		freetab(game.area, game.game_mesure.ligne);
 		return (0);

@@ -9,7 +9,6 @@
 # include "utils.h"
 # include "map.h"
 # include "graphique.h"
-//# include "ft_printf.h"
 
 typedef enum e_bool
 {
