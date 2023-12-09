@@ -1,12 +1,12 @@
 #include "../Include/graphique.h"
 
-void	fillalltexture(t_game game)
+void	fillalltexture(t_game game, void *chara)
 {
 	filltexturesortie(game);
 	filltexturemur(game);
 	filltextureempty(game);
 	filltexturedofus(game);
-	filltexturefeca(game);
+	filltexturefeca(game, chara);
 }
 
 void	calculmap(int	ligne, int colonne, int	*width, int	*height)

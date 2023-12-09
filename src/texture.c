@@ -76,7 +76,7 @@ void	filltexturedofus(t_game game)
 	}
 }
 
-void	filltexturefeca(t_game game)
+void	filltexturefeca(t_game game, void *chara)
 {
 	int	i;
 	size_t	j;
@@ -88,7 +88,7 @@ void	filltexturefeca(t_game game)
 		while (j < game.game_mesure.colonne)
 		{
 			if (game.area[i][j] == 'F')
-				mlx_put_image_to_window(game.mlx, game.win, game.game_obj.feca.fecaface, j * 30, i * 30);
+				mlx_put_image_to_window(game.mlx, game.win, chara, j * 30, i * 30);
 			j++;
 		}
 		i++;

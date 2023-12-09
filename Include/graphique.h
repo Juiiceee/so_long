@@ -3,6 +3,7 @@
 
 # include "minilibx-linux/mlx.h"
 # include <stdlib.h>
+# include <stdio.h>
 typedef	struct s_game_chara
 {
 	void	*fecaface;
@@ -43,11 +44,11 @@ void	filltexturesortie(t_game game);
 void	filltexturemur(t_game game);
 void	filltextureempty(t_game game);
 void	filltexturedofus(t_game game);
-void	filltexturefeca(t_game game);
+void	filltexturefeca(t_game game, void *chara);
 
 //graphique.c
-void	fillalltexture(t_game game);
-void	calculmap(int	ligne, int colonne, int	*width, int	*height);
+void	fillalltexture(t_game game, void *chara);
+void	calculmap(int ligne, int colonne, int *width, int *height);
 void	settexture(t_game *game);
 int		game_init(t_game *game);
 
@@ -56,5 +57,9 @@ void	freeall(t_game *game);
 void	destroytexture(t_game *game);
 void	freetab(char **area, int ligne);
 
+//eventmouvement.c
+
+//event.c
+int	key(int keycode, t_game *game);
 
 #endif
