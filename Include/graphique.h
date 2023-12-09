@@ -74,14 +74,17 @@ int		game_init(t_game *game);
 void	freeall(t_game *game);
 void	destroytexture(t_game *game);
 void	freetab(char **area, int ligne);
+void	putpos(t_game *game, int x, int y);
 
 //eventmouvement.c
-//void	mfront(t_game *game);
+void	mfront(t_game *game);
 
 //event.c
 int	key(int keycode, t_game *game);
 int	closecross(t_game *game);
+
+//is.c o cas ou
 int	iswall(char c);
-//int	issortie(t_game game);
+int	issortie(t_game game, char c);
 
 #endif

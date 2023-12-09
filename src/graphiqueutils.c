@@ -34,3 +34,9 @@ void	freeall(t_game *game)
 	freetab(game->area, game->game_mesure.ligne);
 	exit(0);
 }
+
+void	putpos(t_game *game, int x, int y)
+{
+	game->game_pos.x = x;
+	game->game_pos.y = y;
+}

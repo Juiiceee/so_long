@@ -3,7 +3,7 @@
 int	key(int keycode, t_game *game)
 {
 	if (keycode == XK_Up || keycode == XK_w)
-		printf("%d\n", game->game_obj.nbdofus);//mfront(game);
+		mfront(game);
 	else if(keycode == XK_Down || keycode == XK_s)
 		printf("DOWN\n");
 	else if (keycode == XK_Left || keycode == XK_a)
@@ -24,7 +24,7 @@ int	iswall(char c)
 {
 	return (c == 'W');
 }
-/*int	issortie(t_game game)
+int	issortie(t_game game, char c)
 {
-
-}*/
+	return (c == 'S' && game.game_obj.nbdofus != 0);
+}
