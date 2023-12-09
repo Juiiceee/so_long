@@ -3,7 +3,7 @@
 
 # include "global.h"
 
-void	freetab(char **tab, int ligne);
+void	freetab(char **area, int ligne);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 int		error(char *text);
 int		freereturn(char *str);

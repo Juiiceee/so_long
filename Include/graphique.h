@@ -1,21 +1,7 @@
-#ifndef GLOBAL_H
-# define GLOBAL_H
+#ifndef GRAPHIQUE_H
+# define GRAPHIQUE_H
 
-# include "minilibx-linux/mlx.h"
-# include <stdio.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include "get_next_line.h"
-# include "utils.h"
-# include "map.h"
-//# include "ft_printf.h"
-
-typedef enum e_bool
-{
-	False,
-	True
-}	t_bool;
+//# include "global.h"
 
 typedef	struct s_game_chara
 {
@@ -51,5 +37,16 @@ typedef struct s_game
 	char			**area;
 	t_game_obj		game_obj;
 }	t_game;
+
+//texture.c
+void	filltexturesortie(t_game game);
+void	filltexturemur(t_game game);
+void	filltextureempty(t_game game);
+void	filltexturedofus(t_game game);
+void	filltexturefeca(t_game game);
+
+//graphique.c
+void	fillalltexture(t_game game);
+
 
 #endif

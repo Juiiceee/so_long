@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:54:08 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/06 16:58:44 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/09 10:33:45 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-void	freetab(char **tab, int ligne)
+void	freetab(char **area, int ligne)
 {
 	int	i;
 
 	i = 0;
 	while (i < ligne)
 	{
-		free(tab[i]);
+		free(area[i]);
 		i++;
 	}
-	free(tab);
+	free(area);
 }
 
 int	error(char *text)

@@ -1,6 +1,6 @@
 #include "../Include/map.h"
 
-int	checkSortie(char **tab, int ligne, int colonne)
+int	checkSortie(char **area, int ligne, int colonne)
 {
 	int	i;
 	int	j;
@@ -13,7 +13,7 @@ int	checkSortie(char **tab, int ligne, int colonne)
 		j = 0;
 		while (j < colonne)
 		{
-			if (tab[i][j] == 'S')
+			if (area[i][j] == 'S')
 				sortie++;
 			j++;
 		}
@@ -22,7 +22,7 @@ int	checkSortie(char **tab, int ligne, int colonne)
 	return (sortie == 1);
 }
 
-int	checkFeca(char **tab, int ligne, int colonne)
+int	checkFeca(char **area, int ligne, int colonne)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ int	checkFeca(char **tab, int ligne, int colonne)
 		j = 0;
 		while (j < colonne)
 		{
-			if (tab[i][j] == 'F')
+			if (area[i][j] == 'F')
 				feca++;
 			j++;
 		}
@@ -44,7 +44,7 @@ int	checkFeca(char **tab, int ligne, int colonne)
 	return (feca == 1);
 }
 
-int	checkDofus(char **tab, int ligne, int colonne)
+int	checkDofus(char **area, int ligne, int colonne)
 {
 	int	i;
 	int	j;
@@ -57,7 +57,7 @@ int	checkDofus(char **tab, int ligne, int colonne)
 		j = 0;
 		while (j < colonne)
 		{
-			if (tab[i][j] == 'D')
+			if (area[i][j] == 'D')
 				dofus++;
 			j++;
 		}
@@ -66,7 +66,7 @@ int	checkDofus(char **tab, int ligne, int colonne)
 	return ((dofus > 0) * dofus);
 }
 
-int	checkRoublard(char **tab, int ligne, int colonne)
+int	checkRoublard(char **area, int ligne, int colonne)
 {
 	int	i;
 	int	j;
@@ -79,7 +79,7 @@ int	checkRoublard(char **tab, int ligne, int colonne)
 		j = 0;
 		while (j < colonne)
 		{
-			if (tab[i][j] == 'R')
+			if (area[i][j] == 'R')
 				roublard++;
 			j++;
 		}

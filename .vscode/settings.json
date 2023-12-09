@@ -3,6 +3,7 @@
 		"get_next_line.h": "c",
 		"map.h": "c",
 		"global.h": "c",
-		"ft_printf.h": "c"
+		"ft_printf.h": "c",
+		"*.gitignore": "cpp"
 	}
 }
