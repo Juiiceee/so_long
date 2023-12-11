@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:59 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:15:00 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 17:17:15 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	filltexturesortie(t_game game)
 {
-	int	i;
+	int		i;
 	size_t	j;
 
 	i = 0;
@@ -24,7 +24,8 @@ void	filltexturesortie(t_game game)
 		while (j < game.game_mesure.colonne)
 		{
 			if (game.area[i][j] == 'S')
-				mlx_put_image_to_window(game.mlx, game.win, game.game_obj.sortie, j * 30, i * 30);
+				mlx_put_image_to_window(game.mlx, game.win,
+					game.game_obj.sortie, j * 30, i * 30);
 			j++;
 		}
 		i++;
@@ -33,7 +34,7 @@ void	filltexturesortie(t_game game)
 
 void	filltexturemur(t_game game)
 {
-	int	i;
+	int		i;
 	size_t	j;
 
 	i = 0;
@@ -43,7 +44,8 @@ void	filltexturemur(t_game game)
 		while (j < game.game_mesure.colonne)
 		{
 			if (game.area[i][j] == 'W')
-				mlx_put_image_to_window(game.mlx, game.win, game.game_obj.mur, j * 30, i * 30);
+				mlx_put_image_to_window(game.mlx,
+					game.win, game.game_obj.mur, j * 30, i * 30);
 			j++;
 		}
 		i++;
@@ -52,7 +54,7 @@ void	filltexturemur(t_game game)
 
 void	filltextureempty(t_game game)
 {
-	int	i;
+	int		i;
 	size_t	j;
 
 	i = 0;
@@ -62,7 +64,8 @@ void	filltextureempty(t_game game)
 		while (j < game.game_mesure.colonne)
 		{
 			if (game.area[i][j] == '0')
-				mlx_put_image_to_window(game.mlx, game.win, game.game_obj.empty, j * 30, i * 30);
+				mlx_put_image_to_window(game.mlx,
+					game.win, game.game_obj.empty, j * 30, i * 30);
 			j++;
 		}
 		i++;
@@ -71,7 +74,7 @@ void	filltextureempty(t_game game)
 
 void	filltexturedofus(t_game game)
 {
-	int	i;
+	int		i;
 	size_t	j;
 
 	i = 0;
@@ -81,7 +84,8 @@ void	filltexturedofus(t_game game)
 		while (j < game.game_mesure.colonne)
 		{
 			if (game.area[i][j] == 'D')
-				mlx_put_image_to_window(game.mlx, game.win, game.game_obj.dofus, j * 30, i * 30);
+				mlx_put_image_to_window(game.mlx,
+					game.win, game.game_obj.dofus, j * 30, i * 30);
 			j++;
 		}
 		i++;
@@ -90,7 +94,7 @@ void	filltexturedofus(t_game game)
 
 void	filltexturefeca(t_game game, void *chara)
 {
-	int	i;
+	int		i;
 	size_t	j;
 
 	i = 0;
@@ -100,7 +104,8 @@ void	filltexturefeca(t_game game, void *chara)
 		while (j < game.game_mesure.colonne)
 		{
 			if (game.area[i][j] == 'F')
-				mlx_put_image_to_window(game.mlx, game.win, chara, j * 30, i * 30);
+				mlx_put_image_to_window(game.mlx,
+					game.win, chara, j * 30, i * 30);
 			j++;
 		}
 		i++;

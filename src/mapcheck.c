@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:50 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 15:46:18 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 17:07:48 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,5 @@ int		checkextension(char	*str)
 		cb++;
 	if (cb == 4)
 		return (1);
-	return (0);	
+	return (error("La map n'a pas la bonne extension"));	
 }

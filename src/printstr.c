@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   global.h                                           :+:      :+:    :+:   */
+/*   printstr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 14:15:07 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 17:33:01 by lbehr            ###   ########.fr       */
+/*   Created: 2023/11/16 15:04:30 by lbehr             #+#    #+#             */
+/*   Updated: 2023/12/11 17:30:48 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GLOBAL_H
-# define GLOBAL_H
+#include "../Include/ft_printf.h"
 
-# include <stdlib.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include "get_next_line.h"
-# include "utils.h"
-# include "map.h"
-# include "ft_printf.h"
-# include "graphique.h"
-
-typedef enum e_bool
+int	ft_putstr(char *s)
 {
-	False,
-	True
-}	t_bool;
+	if (!s)
+		return (write(1, "(null)", 6));
+	return (write(1, s, (int)ft_strlen(s)));
+}
 
-#endif
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}

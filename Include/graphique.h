@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 15:48:57 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 17:37:06 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,24 @@
 
 # include "minilibx-linux/mlx.h"
 # include <stdlib.h>
-# include <stdio.h>
 
-# define XK_w		0x0077
-# define XK_a		0x0061
-# define XK_d		0x0064
-# define XK_s		0x0073
-# define XK_Up		0xff52
-# define XK_Left	0xff51
-# define XK_Right	0xff53
-# define XK_Down	0xff54
-# define XK_Escape	0xff1b
+# define XK_W		0x0077
+# define XK_A		0x0061
+# define XK_D		0x0064
+# define XK_S		0x0073
+# define XK_UP		0xff52
+# define XK_LEFT	0xff51
+# define XK_RIGHT	0xff53
+# define XK_DOWN	0xff54
+# define XK_ESCAPE	0xff1b
 
-typedef	struct s_game_pos
+typedef struct s_game_pos
 {
 	int	x;
 	int	y;
 }	t_game_pos;
 
-typedef	struct s_game_chara
+typedef struct s_game_chara
 {
 	void	*fecaface;
 	void	*fecadroite;
@@ -41,7 +40,7 @@ typedef	struct s_game_chara
 	void	*fecados;
 }	t_game_chara;
 
-typedef	struct s_game_obj
+typedef struct s_game_obj
 {
 	void			*sortie;
 	t_game_chara	feca;
@@ -51,7 +50,7 @@ typedef	struct s_game_obj
 	void			*empty;
 }	t_game_obj;
 
-typedef	struct s_game_mesure
+typedef struct s_game_mesure
 {
 	int			width;
 	int			height;
@@ -90,10 +89,10 @@ void	freetab(char **area, int ligne);
 void	putpos(t_game *game, int x, int y);
 
 //eventmouvement.c
-void	mUp(t_game *game);
-void	mDown(t_game *game);
-void	mLeft(t_game *game);
-void	mRight(t_game *game);
+void	mup(t_game *game);
+void	mdown(t_game *game);
+void	mleft(t_game *game);
+void	mright(t_game *game);
 
 //event.c
 int		key(int keycode, t_game *game);

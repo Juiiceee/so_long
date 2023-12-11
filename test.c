@@ -1,4 +1,5 @@
 #include "Include/global.h"
+#include "Include/ft_printf.h"
 
 int main(/*int argc, char **argv*/)
 {
@@ -26,5 +27,5 @@ int main(/*int argc, char **argv*/)
 	mlx_hook(game.win, 17, 1L<<17, closecross, &game);
 	mlx_loop(game.mlx);
 	freeall(&game);
-	return 0;
+	return (0);
 }
