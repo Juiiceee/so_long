@@ -23,8 +23,8 @@ int main(/*int argc, char **argv*/)
 		return (0);
 	}
 	fillalltexture(game, game.game_obj.feca.fecaface);
-	mlx_hook(game.win, 2, 1L<<0, key, &game);
-	mlx_hook(game.win, 17, 1L<<17, closecross, &game);
+	mlx_hook(game.win, 2, 1L << 0, key, &game);
+	mlx_hook(game.win, 17, 1L << 17, closecross, &game);
 	mlx_loop(game.mlx);
 	freeall(&game);
 	return (0);

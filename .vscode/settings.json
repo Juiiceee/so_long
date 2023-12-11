@@ -4,6 +4,7 @@
 		"map.h": "c",
 		"global.h": "c",
 		"ft_printf.h": "c",
-		"*.gitignore": "cpp"
+		"*.gitignore": "cpp",
+		"unistd.h": "c"
 	}
 }

@@ -6,14 +6,14 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:07:12 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 17:32:48 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 17:45:55 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "global.h"
+# include "get_next_line.h"
 # include <stdarg.h>
 
 int		ft_printf(const char *str, ...);
