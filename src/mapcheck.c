@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:50 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:14:51 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 15:46:18 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,21 @@ int	checkall(t_game *game)
 	if (!checkDofus(game))
 		good = error("Dofus error");
 	return (good * checkDofus(game));
+}
+
+int		checkextension(char	*str)
+{
+	int	cb;
+	int	i;
+	char *ext = ".ber";
+
+	cb = 0;
+	i = 0;
+	while (str[i] != '.')
+		i++;
+	while (str[i + cb] == ext[cb] && str[i + cb] && ext[cb])
+		cb++;
+	if (cb == 4)
+		return (1);
+	return (0);	
 }

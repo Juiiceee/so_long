@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:15:14 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 15:48:57 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ typedef struct s_game
 {
 	void			*mlx;
 	void			*win;
+	int				nbmouv;
 	t_game_mesure	game_mesure;
 	char			**area;
 	t_game_obj		game_obj;

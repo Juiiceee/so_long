@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:19 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:15:20 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/11 15:11:49 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char 	**inputarea(char *map, int ligne, size_t colonne);
 
 int		checkmur(t_game *game);
 int		checkall(t_game *game);
+int		checkextension(char	*str);
 
 int		checkSortie(t_game *game);
 int		checkFeca(t_game *game);

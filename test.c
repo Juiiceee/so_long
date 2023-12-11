@@ -1,13 +1,16 @@
 #include "Include/global.h"
-//#include "Include/graphique.h"
 
-int main(void) {
+int main(/*int argc, char **argv*/)
+{
 	t_game	game;
+	char	map[] = "map.ber";
 
-	game.game_mesure.ligne = repsize("map.ber", &game.game_mesure.colonne);
+	if (!checkextension(map))
+		return (0);
+	game.game_mesure.ligne = repsize(map, &game.game_mesure.colonne);
 	if (game.game_mesure.ligne < 0)
 		return (error("La saisie n'est pas un rectangle"));
-	game.area = inputarea("map.ber", game.game_mesure.ligne, game.game_mesure.colonne);
+	game.area = inputarea(map, game.game_mesure.ligne, game.game_mesure.colonne);
 	if (!checkall(&game))
 	{
 		freetab(game.area, game.game_mesure.ligne);
