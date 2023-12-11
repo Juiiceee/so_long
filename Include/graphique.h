@@ -77,7 +77,10 @@ void	freetab(char **area, int ligne);
 void	putpos(t_game *game, int x, int y);
 
 //eventmouvement.c
-void	mfront(t_game *game);
+void	mUp(t_game *game);
+void	mDown(t_game *game);
+void	mLeft(t_game *game);
+void	mRight(t_game *game);
 
 //event.c
 int	key(int keycode, t_game *game);

@@ -37,7 +37,7 @@ int	checkFeca(t_game *game)
 		{
 			if (game->area[i][j] == 'F')
 			{
-				putpos(game, i, (int)j);
+				putpos(game, (int)j, i);
 				feca++;
 			}
 			j++;
