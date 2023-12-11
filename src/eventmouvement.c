@@ -12,6 +12,7 @@ void	mUp(t_game *game)
 		game->area[game->game_pos.y][game->game_pos.x ] = '0';
 		putpos(game, game->game_pos.x, game->game_pos.y - 1);
 	}
+	fillalltexture(*game, game->game_obj.feca.fecados);
 }
 
 void	mDown(t_game *game)
@@ -26,6 +27,7 @@ void	mDown(t_game *game)
 		game->area[game->game_pos.y][game->game_pos.x ] = '0';
 		putpos(game, game->game_pos.x, game->game_pos.y + 1);
 	}
+	fillalltexture(*game, game->game_obj.feca.fecaface);
 }
 
 void	mLeft(t_game *game)
@@ -40,6 +42,7 @@ void	mLeft(t_game *game)
 		game->area[game->game_pos.y][game->game_pos.x ] = '0';
 		putpos(game, game->game_pos.x - 1, game->game_pos.y);
 	}
+	fillalltexture(*game, game->game_obj.feca.fecagauche);
 }
 
 void	mRight(t_game *game)
@@ -54,4 +57,5 @@ void	mRight(t_game *game)
 		game->area[game->game_pos.y][game->game_pos.x ] = '0';
 		putpos(game, game->game_pos.x + 1, game->game_pos.y);
 	}
+	fillalltexture(*game, game->game_obj.feca.fecadroite);
 }

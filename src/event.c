@@ -2,7 +2,6 @@
 
 int	key(int keycode, t_game *game)
 {
-	int i = 0;
 	if (keycode == XK_Up || keycode == XK_w)
 		mUp(game);
 	else if(keycode == XK_Down || keycode == XK_s)
@@ -13,12 +12,7 @@ int	key(int keycode, t_game *game)
 		mRight(game);
 	else if (keycode == XK_Escape)
 		freeall(game);
-	while (i < game->game_mesure.ligne)
-		{
-			printf("%s\n",game->area[i]);
-			i++;
-		}
-	printf("\n nomre de dofus = %d \n", game->game_obj.nbdofus);
+	printf("nombre de dofus = %d \n", game->game_obj.nbdofus);
 	return (0);
 }
 int	closecross(t_game *game)
