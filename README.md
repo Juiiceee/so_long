@@ -8,3 +8,8 @@
 - D = Dofus
 
 ### Input controle
+- W || &uarr; = UP
+- A || &larr; = LEFT
+- D || &rarr; = RIGHT
+- S || &darr; = DOWN
+- ESC  || X = Fermer correctement
