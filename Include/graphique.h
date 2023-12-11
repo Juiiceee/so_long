@@ -83,11 +83,10 @@ void	mLeft(t_game *game);
 void	mRight(t_game *game);
 
 //event.c
-int	key(int keycode, t_game *game);
-int	closecross(t_game *game);
-
-//is.c o cas ou
-int	iswall(char c);
-int	issortie(t_game game, char c);
+int		key(int keycode, t_game *game);
+int		closecross(t_game *game);
+int		iswall(char c);
+int		issortie(t_game game, char c, int i);
+void	endgame(t_game *game);
 
 #endif

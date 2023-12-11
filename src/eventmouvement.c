@@ -2,10 +2,12 @@
 
 void	mUp(t_game *game)
 {
-	if (game->area[game->game_pos.y - 1][game->game_pos.x] == 'W' || issortie(*game, game->area[game->game_pos.y - 1][game->game_pos.x]))
+	if (game->area[game->game_pos.y - 1][game->game_pos.x] == 'W' || issortie(*game, game->area[game->game_pos.y - 1][game->game_pos.x], 0))
 		return;
 	else if (game->area[game->game_pos.y - 1][game->game_pos.x] == 'D')
 		game->game_obj.nbdofus--;
+	else if (issortie(*game, game->area[game->game_pos.y - 1][game->game_pos.x], 1))
+		endgame(game);
 	if (game->area[game->game_pos.y - 1][game->game_pos.x] == 'D' || game->area[game->game_pos.y - 1][game->game_pos.x] == '0')
 	{
 		game->area[game->game_pos.y - 1][game->game_pos.x] = 'F';
@@ -17,10 +19,12 @@ void	mUp(t_game *game)
 
 void	mDown(t_game *game)
 {
-	if (game->area[game->game_pos.y + 1][game->game_pos.x] == 'W' || issortie(*game, game->area[game->game_pos.y + 1][game->game_pos.x]))
+	if (game->area[game->game_pos.y + 1][game->game_pos.x] == 'W' || issortie(*game, game->area[game->game_pos.y + 1][game->game_pos.x], 0))
 		return;
 	else if (game->area[game->game_pos.y + 1][game->game_pos.x] == 'D')
 		game->game_obj.nbdofus--;
+	else if (issortie(*game, game->area[game->game_pos.y + 1][game->game_pos.x], 1))
+		endgame(game);
 	if (game->area[game->game_pos.y + 1][game->game_pos.x] == 'D' || game->area[game->game_pos.y + 1][game->game_pos.x] == '0')
 	{
 		game->area[game->game_pos.y + 1][game->game_pos.x] = 'F';
@@ -32,10 +36,12 @@ void	mDown(t_game *game)
 
 void	mLeft(t_game *game)
 {
-	if (game->area[game->game_pos.y][game->game_pos.x - 1] == 'W' || issortie(*game, game->area[game->game_pos.y][game->game_pos.x - 1]))
+	if (game->area[game->game_pos.y][game->game_pos.x - 1] == 'W' || issortie(*game, game->area[game->game_pos.y][game->game_pos.x - 1], 0))
 		return;
 	else if (game->area[game->game_pos.y][game->game_pos.x - 1] == 'D')
 		game->game_obj.nbdofus--;
+	else if (issortie(*game, game->area[game->game_pos.y][game->game_pos.x - 1], 1))
+		endgame(game);
 	if (game->area[game->game_pos.y][game->game_pos.x - 1] == 'D' || game->area[game->game_pos.y][game->game_pos.x - 1] == '0')
 	{
 		game->area[game->game_pos.y][game->game_pos.x - 1] = 'F';
@@ -47,10 +53,12 @@ void	mLeft(t_game *game)
 
 void	mRight(t_game *game)
 {
-	if (game->area[game->game_pos.y][game->game_pos.x + 1] == 'W' || issortie(*game, game->area[game->game_pos.y][game->game_pos.x + 1]))
+	if (game->area[game->game_pos.y][game->game_pos.x + 1] == 'W' || issortie(*game, game->area[game->game_pos.y][game->game_pos.x + 1], 0))
 		return;
 	else if (game->area[game->game_pos.y][game->game_pos.x + 1] == 'D')
 		game->game_obj.nbdofus--;
+	else if (issortie(*game, game->area[game->game_pos.y][game->game_pos.x + 1], 1))
+		endgame(game);
 	if (game->area[game->game_pos.y][game->game_pos.x + 1] == 'D' || game->area[game->game_pos.y][game->game_pos.x + 1] == '0')
 	{
 		game->area[game->game_pos.y][game->game_pos.x + 1] = 'F';

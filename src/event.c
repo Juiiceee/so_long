@@ -1,4 +1,5 @@
 #include "../Include/graphique.h"
+#include "unistd.h"
 
 int	key(int keycode, t_game *game)
 {
@@ -25,7 +26,17 @@ int	iswall(char c)
 {
 	return (c == 'W');
 }
-int	issortie(t_game game, char c)
+int	issortie(t_game game, char c, int i)
 {
-	return (c == 'S' && game.game_obj.nbdofus != 0);
+	if (i == 0)
+		return (c == 'S' && game.game_obj.nbdofus != 0);
+	if (i == 1)
+		return (c == 'S' && game.game_obj.nbdofus == 0);
+	return (0);
+}
+
+void	endgame(t_game *game)
+{
+	write(1,"Tu es sortie GG!!!!",20);
+	freeall(game);
 }
