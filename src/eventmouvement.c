@@ -38,7 +38,7 @@ void	mLeft(t_game *game)
 	{
 		game->area[game->game_pos.y][game->game_pos.x - 1] = 'F';
 		game->area[game->game_pos.y][game->game_pos.x ] = '0';
-		putpos(game, game->game_pos.x, game->game_pos.y - 1);
+		putpos(game, game->game_pos.x - 1, game->game_pos.y);
 	}
 }
 
@@ -52,6 +52,6 @@ void	mRight(t_game *game)
 	{
 		game->area[game->game_pos.y][game->game_pos.x + 1] = 'F';
 		game->area[game->game_pos.y][game->game_pos.x ] = '0';
-		putpos(game, game->game_pos.x, game->game_pos.y + 1);
+		putpos(game, game->game_pos.x + 1, game->game_pos.y);
 	}
 }

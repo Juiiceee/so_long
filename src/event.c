@@ -8,9 +8,9 @@ int	key(int keycode, t_game *game)
 	else if(keycode == XK_Down || keycode == XK_s)
 		mDown(game);
 	else if (keycode == XK_Left || keycode == XK_a)
-		printf("LEFT\n");
+		mLeft(game);
 	else if (keycode == XK_Right || keycode == XK_d)
-		printf("RIGHT\n");
+		mRight(game);
 	else if (keycode == XK_Escape)
 		freeall(game);
 	while (i < game->game_mesure.ligne)
