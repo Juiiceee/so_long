@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 14:22:28 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 15:36:33 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,13 @@ typedef struct s_game
 {
 	void			*mlx;
 	void			*win;
-	int				nbmouv;
-	t_game_mesure	game_mesure;
 	char			**area;
+	int				nbmouv;
+	int				nbtexture;
+	t_game_mesure	game_mesure;
 	t_game_obj		game_obj;
 	t_game_pos		game_pos;
+	int				poub;
 }	t_game;
 
 //texture.c
@@ -83,12 +85,13 @@ void	filltexturefeca(t_game game, void *chara);
 //graphique.c
 void	fillalltexture(t_game game, void *chara);
 void	calculmap(int ligne, int colonne, int *width, int *height);
-void	settexture(t_game *game);
+int		settexture(t_game *game);
 int		game_init(t_game *game);
 
 //graphiqueutils.c
 void	freeall(t_game *game);
 void	destroytexture(t_game *game);
+void	destroytexturem(t_game *game);
 void	freetab(char **area, int ligne);
 void	putpos(t_game *game, int x, int y);
 

@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:34 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:14:35 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 15:51:53 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,24 @@ void	putpos(t_game *game, int x, int y)
 {
 	game->game_pos.x = x;
 	game->game_pos.y = y;
+}
+
+void	destroytexturem(t_game *game)
+{
+	if (game->nbtexture > 0)
+		mlx_destroy_image(game->mlx, game->game_obj.sortie);
+	if (game->nbtexture > 1)
+		mlx_destroy_image(game->mlx, game->game_obj.dofus);
+	if (game->nbtexture > 2)
+		mlx_destroy_image(game->mlx, game->game_obj.mur);
+	if (game->nbtexture > 3)
+		mlx_destroy_image(game->mlx, game->game_obj.empty);
+	if (game->nbtexture > 4)
+		mlx_destroy_image(game->mlx, game->game_obj.feca.fecaface);
+	if (game->nbtexture > 5)
+		mlx_destroy_image(game->mlx, game->game_obj.feca.fecadroite);
+	if (game->nbtexture > 6)
+		mlx_destroy_image(game->mlx, game->game_obj.feca.fecagauche);
+	if (game->nbtexture > 7)
+		mlx_destroy_image(game->mlx, game->game_obj.feca.fecados);
 }
