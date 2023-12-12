@@ -16,7 +16,8 @@
 				"-lXext",
 				"-Wall",
 				"-Werror",
-				"-Wextra"
+				"-Wextra",
+				"-g3"
             ],
             "options": {
                 "cwd": "${fileDirname}"

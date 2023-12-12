@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 17:47:04 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 14:22:28 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "ft_printf.h"
+# include "utils.h"
 
 
 # define XK_W		0x0077

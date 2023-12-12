@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:18 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 17:54:32 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 11:48:26 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,17 @@ int	issortie(t_game game, char c, int i)
 
 void	endgame(t_game *game)
 {
-	if (game->nbmouv < 30)
-		ft_printf("GG tu as trouve la sortie en seulement %d coups\n", game->nbmouv);
-	else if (game->nbmouv < 60)
+	if (game->nbmouv <= 30)
+	{
+		ft_printf("GG tu as trouve la sortie en seulement");
+		ft_printf(" %d coups\n", game->nbmouv);
+	}
+	else if (game->nbmouv <= 60)
 		ft_printf("GG tu as trouve la sortie en %d coups\n", game->nbmouv);
-	else if (game->nbmouv < 90)
-		ft_printf("Ouais tu as trouve la sortie tu as un peu force avec tes %d coups\n", game->nbmouv);
+	else if (game->nbmouv >= 61)
+	{
+		ft_printf("Ouais tu as trouve la sortie	tu as un peu force avec");
+		ft_printf(" tes %d coups\n", game->nbmouv);
+	}
 	freeall(game);
 }

@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:54:08 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/09 14:37:34 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 14:20:30 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 int	error(char *text)
 {
-	write (2, "Error\n", 6);
-	write(2,text,ft_strlen(text));
-	write (2, "\n", 1);
+	ft_printf("Error\n%s\n", text);
 	return (0);
 }
 

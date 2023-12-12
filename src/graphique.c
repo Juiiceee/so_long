@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:29 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 17:40:44 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 14:26:38 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,13 @@ int	game_init(t_game *game)
 {
 	game->mlx = mlx_init();
 	if (!game->mlx)
-		return (0);
+		return (error("L'affichage n'affiche pas"));
 	calculmap(game->game_mesure.ligne, game->game_mesure.colonne,
 		&game->game_mesure.width, &game->game_mesure.height);
 	game->win = mlx_new_window(game->mlx, game->game_mesure.width,
 			game->game_mesure.height, "so_long");
 	if (!game->win)
-	{
-		free(game->mlx);
-		return (0);
-	}
+		return (free(game->mlx), error("La fenetre ne fenetre pas"));
 	game->nbmouv = 0;
 	settexture(game);
 	return (1);

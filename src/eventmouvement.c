@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:13:54 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 17:55:29 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/12 11:49:15 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	mdown(t_game *game)
 	|| game->area[game->game_pos.y + 1][game->game_pos.x] == '0')
 	{
 		game->area[game->game_pos.y + 1][game->game_pos.x] = 'F';
-		game->area[game->game_pos.y][game->game_pos.x ] = '0';
+		game->area[game->game_pos.y][game->game_pos.x] = '0';
 		putpos(game, game->game_pos.x, game->game_pos.y + 1);
 	}
 	game->nbmouv++;
