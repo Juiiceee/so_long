@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 15:57:01 by lbehr             #+#    #+#              #
-#    Updated: 2023/12/13 13:41:30 by lbehr            ###   ########.fr        #
+#    Updated: 2023/12/13 13:54:48 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ $(MLX_PATH):
 	git clone git@github.com:42Paris/minilibx-linux.git Include/minilibx-linux; \
 
 $(NAME)	:	$(OBJS)
+	$(DIR_DUP)
 	make -C $(MLX_PATH) --no-print-directory
 	$(CC) $(OBJS) $(MINI) -o $(NAME)
 
