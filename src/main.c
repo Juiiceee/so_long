@@ -6,18 +6,18 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:02:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 16:41:17 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/13 11:12:20 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Include/global.h"
 #include "../Include/ft_printf.h"
 
-int	main(/*int argc, char **argv*/)
+int	main(int argc, char **argv)
 {
 	t_game	game;
-	int	argc = 2;
-	char *argv[] = {"oui","tsrc/map/valide/mapcool.ber"};
+	/*int	argc = 2;
+	char *argv[] = {"oui","tsrc/map/valide/mapcool.ber"};*/
 
 	if (argc == 2)
 	{
