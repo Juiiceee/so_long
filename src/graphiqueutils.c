@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:34 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 15:51:53 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 14:39:10 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,19 @@ void	destroytexture(t_game *game)
 	mlx_destroy_image(game->mlx, game->game_obj.empty);
 }
 
-void	freetab(char **area, int ligne)
+void	freetab(t_game *game)
 {
 	int	i;
 
 	i = 0;
-	while (i < ligne)
+	while (i < game->game_mesure.ligne)
 	{
-		free(area[i]);
+		free(game->area[i]);
+		free(game->areacpy[i]);
 		i++;
 	}
-	free(area);
+	free(game->area);
+	free(game->areacpy);
 }
 
 void	freeall(t_game *game)
@@ -43,7 +45,7 @@ void	freeall(t_game *game)
 	mlx_destroy_window(game->mlx, game->win);
 	mlx_destroy_display(game->mlx);
 	free(game->mlx);
-	freetab(game->area, game->game_mesure.ligne);
+	freetab(game);
 	exit(0);
 }
 

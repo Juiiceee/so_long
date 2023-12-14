@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 15:36:33 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 14:44:42 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include "ft_printf.h"
 # include "utils.h"
-
 
 # define XK_W		0x0077
 # define XK_A		0x0061
@@ -94,7 +93,7 @@ int		game_init(t_game *game);
 void	freeall(t_game *game);
 void	destroytexture(t_game *game);
 void	destroytexturem(t_game *game);
-void	freetab(char **area, int ligne);
+void	freetab(t_game *game);
 void	putpos(t_game *game, int x, int y);
 
 //eventmouvement.c

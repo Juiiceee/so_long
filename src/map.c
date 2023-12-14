@@ -6,13 +6,13 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:45 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:14:46 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 14:45:09 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Include/map.h"
 
-size_t strlenno(char *str)
+size_t	strlenno(char *str)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ size_t	repsize(char *map, size_t *colonne)
 	test = 0;
 	fd = open(map, O_RDONLY);
 	str = get_next_line(fd);
-	*colonne =strlenno(str);
+	*colonne = strlenno(str);
 	while (1)
 	{
 		ligne++;
@@ -44,7 +44,7 @@ size_t	repsize(char *map, size_t *colonne)
 		if (*colonne != strlenno(str) && str)
 			test = 1;
 		if (!str)
-			break;
+			break ;
 	}
 	close(fd);
 	if (test == 1)

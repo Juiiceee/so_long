@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 15:57:01 by lbehr             #+#    #+#              #
-#    Updated: 2023/12/14 14:19:08 by lbehr            ###   ########.fr        #
+#    Updated: 2023/12/14 14:54:34 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,16 +17,21 @@ SRCS		:= allprint.c main.c checkpath.c eventmouvement.c get_next_line.c graphiqu
 SRCS		:= $(SRCS:%=$(SRC_DIR)/%)
 OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 CC			:= cc
+NORM		:= norminette $(SRC_DIR)/*.c Include/*.h 
 MINI		:= -lX11 -lXext Include/minilibx-linux/libmlx_Linux.a
 CFLAGS		:= -Wall -Wextra -Werror
 MLX_PATH	:= Include/minilibx-linux
 RM			:= rm -rf
 DIR_DUP     = mkdir -p $(@D)
 
-all		:	$(MLX_PATH) $(NAME)
+all		:	norm $(MLX_PATH) $(NAME)
 
 $(MLX_PATH):
-	git clone git@github.com:42Paris/minilibx-linux.git Include/minilibx-linux; \
+	git clone git@github.com:42Paris/minilibx-linux.git Include/minilibx-linux;
+
+norm	:
+	$(NORM)
+	@sleep 5
 
 $(NAME)	:	$(OBJS)
 	$(DIR_DUP)

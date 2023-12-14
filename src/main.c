@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:02:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 14:04:14 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 14:27:34 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 int	main(int argc, char **argv)
 {
 	t_game	game;
-	/*int	argc = 2;
-	char *argv[] = {"oui","tsrc/map/valide/mapcool.ber"};*/
 
 	if (argc == 2)
 	{
@@ -28,10 +26,10 @@ int	main(int argc, char **argv)
 			return (error("La saisie n'est pas un rectangle"));
 		inputarea(argv[1], &game);
 		if (!checkall(&game))
-			return (freetab(game.area, game.game_mesure.ligne), 0);
+			return (freetab(&game), 0);
 		checkpath(&game);
 		if (!game_init(&game))
-			return (freetab(game.area, game.game_mesure.ligne), 0);
+			return (freetab(&game), 0);
 		fillalltexture(game, game.game_obj.feca.fecaface);
 		mlx_hook(game.win, 2, 1L << 0, key, &game);
 		mlx_hook(game.win, 17, 1L << 17, closecross, &game);
