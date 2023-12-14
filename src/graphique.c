@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:29 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 17:04:10 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:24:18 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,17 @@
 
 void	fillalltexture(t_game game, void *chara)
 {
+	char	*str;
+
+	str = ft_itoa(game.nbmouv);
 	filltexturesortie(game);
 	filltexturemur(game);
 	filltextureempty(game);
 	filltexturedofus(game);
 	filltexturefeca(game, chara);
+	mlx_string_put(game.mlx, game.win, game.game_mesure.width - 40,
+		25, create_trgb(0, 0, 0, 0), str);
+	free(str);
 }
 
 void	calculmap(int ligne, int colonne, int	*width, int	*height)

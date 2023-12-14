@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:18 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 11:48:26 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 17:25:47 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int	issortie(t_game game, char c, int i)
 
 void	endgame(t_game *game)
 {
+	game->nbmouv++;
 	if (game->nbmouv <= 30)
 	{
 		ft_printf("GG tu as trouve la sortie en seulement");

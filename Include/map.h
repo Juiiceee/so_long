@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:19 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 14:01:15 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 17:56:33 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		checkextension(char	*str);
 int		checksortie(t_game *game);
 int		checkfeca(t_game *game);
 int		checkdofus(t_game *game);
-int		checkroublard(t_game *game);
+int		checkbouftou(t_game *game);
 
 //checkpath
 int		checkpath(t_game *game);

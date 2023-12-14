@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:50 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 14:10:08 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:10:22 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int	checkall(t_game *game)
 	if (!checksortie(game))
 		good = error("Sortie Error");
 	if (!checkdofus(game))
+		good = error("Dofus error");
+	if (!checkbouftou(game))
 		good = error("Dofus error");
 	if (!checkpath(game))
 		good = error("Tout les collectibles ne sont pas accessibles");

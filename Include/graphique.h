@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 14:44:42 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:19:33 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void	filltexturefeca(t_game game, void *chara);
 //graphique.c
 void	fillalltexture(t_game game, void *chara);
 void	calculmap(int ligne, int colonne, int *width, int *height);
+int		settexturechara(t_game *game);
 int		settexture(t_game *game);
 int		game_init(t_game *game);
 
@@ -101,6 +102,7 @@ void	mup(t_game *game);
 void	mdown(t_game *game);
 void	mleft(t_game *game);
 void	mright(t_game *game);
+int		create_trgb(int t, int r, int g, int b);
 
 //event.c
 int		key(int keycode, t_game *game);

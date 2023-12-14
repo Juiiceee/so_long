@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:13:54 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 11:49:15 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 18:19:15 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,9 @@ void	mright(t_game *game)
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
 	fillalltexture(*game, game->game_obj.feca.fecadroite);
+}
+
+int	create_trgb(int t, int r, int g, int b)
+{
+	return (t << 24 | r << 16 | g << 8 | b);
 }

@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:10 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/11 14:14:11 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 17:55:57 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,24 +81,24 @@ int	checkdofus(t_game *game)
 	return (game->game_obj.nbdofus > 0);
 }
 
-int	checkroublard(t_game *game)
+int	checkbouftou(t_game *game)
 {
 	int		i;
 	size_t	j;
-	int		roublard;
+	int		bouftou;
 
 	i = 0;
-	roublard = 0;
+	bouftou = 0;
 	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
 		while (j < game->game_mesure.colonne)
 		{
 			if (game->area[i][j] == 'R')
-				roublard++;
+				bouftou++;
 			j++;
 		}
 		i++;
 	}
-	return (roublard == 1);
+	return (bouftou <= 1);
 }
