@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:29 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 15:53:10 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 17:04:10 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	fillalltexture(t_game game, void *chara)
 
 void	calculmap(int ligne, int colonne, int	*width, int	*height)
 {
-	*width = colonne * 30;
-	*height = ligne * 30;
+	*width = colonne * 50;
+	*height = ligne * 50;
 }
 
 int	settexturechara(t_game *game)
