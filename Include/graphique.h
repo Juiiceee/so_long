@@ -50,6 +50,7 @@ typedef struct s_game_obj
 	t_game_chara	feca;
 	void			*dofus;
 	int				nbdofus;
+	int				nbdofuscpy;
 	void			*mur;
 	void			*empty;
 }	t_game_obj;
@@ -67,6 +68,7 @@ typedef struct s_game
 	void			*mlx;
 	void			*win;
 	char			**area;
+	char			**areacpy;
 	int				nbmouv;
 	int				nbtexture;
 	t_game_mesure	game_mesure;

@@ -16,6 +16,7 @@
 # include "ft_printf.h"
 # include <stdlib.h>
 
+//map_utils.c
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 int		error(char *text);
 int		freereturn(char *str);

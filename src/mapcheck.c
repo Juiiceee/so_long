@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:50 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/12 14:01:23 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/14 14:10:08 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,15 @@ int	checkall(t_game *game)
 	good = True;
 	if (!checkmur(game))
 		good = error("Mur error");
-	if (!checkFeca(game))
+	if (!checkfeca(game))
 		good = error("Position depart error");
-	if (!checkSortie(game))
+	if (!checksortie(game))
 		good = error("Sortie Error");
-	if (!checkDofus(game))
+	if (!checkdofus(game))
 		good = error("Dofus error");
-	return (good * checkDofus(game));
+	if (!checkpath(game))
+		good = error("Tout les collectibles ne sont pas accessibles");
+	return (good);
 }
 
 int	checkextension(char	*str)

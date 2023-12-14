@@ -53,38 +53,42 @@ size_t	repsize(char *map, size_t *colonne)
 	return (ligne);
 }
 
-char **createarea(int ligne, size_t colonne)
+char	**createarea(int ligne, size_t colonne)
 {
-	char **area;
-	int	i;
+	char	**area;
+	int		i;
 
 	i = 0;
-	area = ft_calloc(ligne, sizeof(char*));
+	area = ft_calloc(ligne, sizeof(char *));
 	while (i < ligne)
 	{
-		area[i] = ft_calloc(colonne + 1,1);
+		area[i] = ft_calloc(colonne + 1, 1);
 		i++;
 	}
 	return (area);
 }
 
-char **inputarea(char *map, int ligne, size_t colonne)
+void	inputarea(char *map, t_game *game)
 {
-	int	fd;
-	int	i;
-	char **area;
-	char *text;
+	int		fd;
+	int		i;
+	char	*text;
 
 	i = 0;
-	fd = open(map,O_RDONLY);
-	area = createarea(ligne, colonne);
-	while (i < ligne)
+	fd = open(map, O_RDONLY);
+	game->area = createarea(game->game_mesure.ligne,
+			game->game_mesure.colonne);
+	game->areacpy = createarea(game->game_mesure.ligne,
+			game->game_mesure.colonne);
+	while (i < game->game_mesure.ligne)
 	{
 		text = get_next_line(fd);
-		area[i] = ft_strncpy(area[i], text, colonne);
+		game->area[i] = ft_strncpy(game->area[i],
+				text, game->game_mesure.colonne);
+		game->areacpy[i] = ft_strncpy(game->areacpy[i],
+				text, game->game_mesure.colonne);
 		free(text);
 		i++;
 	}
 	close(fd);
-	return (area);
 }

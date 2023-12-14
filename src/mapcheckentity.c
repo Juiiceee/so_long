@@ -12,7 +12,7 @@
 
 #include "../Include/map.h"
 
-int	checkSortie(t_game *game)
+int	checksortie(t_game *game)
 {
 	int		i;
 	size_t	j;
@@ -34,11 +34,11 @@ int	checkSortie(t_game *game)
 	return (sortie == 1);
 }
 
-int	checkFeca(t_game *game)
+int	checkfeca(t_game *game)
 {
-	int	i;
+	int		i;
 	size_t	j;
-	int	feca;
+	int		feca;
 
 	i = 0;
 	feca = 0;
@@ -59,34 +59,33 @@ int	checkFeca(t_game *game)
 	return (feca == 1);
 }
 
-int	checkDofus(t_game *game)
+int	checkdofus(t_game *game)
 {
-	int	i;
+	int		i;
 	size_t	j;
-	int	dofus;
 
 	i = 0;
-	dofus = 0;
+	game->game_obj.nbdofus = 0;
 	while (i < game->game_mesure.ligne)
 	{
 		j = 0;
 		while (j < game->game_mesure.colonne)
 		{
 			if (game->area[i][j] == 'D')
-				dofus++;
+				game->game_obj.nbdofus++;
 			j++;
 		}
 		i++;
 	}
-	game->game_obj.nbdofus = dofus;
-	return (dofus > 0);
+	game->game_obj.nbdofuscpy = game->game_obj.nbdofus;
+	return (game->game_obj.nbdofus > 0);
 }
 
-int	checkRoublard(t_game *game)
+int	checkroublard(t_game *game)
 {
-	int	i;
+	int		i;
 	size_t	j;
-	int	roublard;
+	int		roublard;
 
 	i = 0;
 	roublard = 0;
