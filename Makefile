@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 15:57:01 by lbehr             #+#    #+#              #
-#    Updated: 2023/12/15 13:03:00 by lbehr            ###   ########.fr        #
+#    Updated: 2023/12/15 15:26:55 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 CC			:= cc
 NORM		:= norminette $(SRC_DIR)/*.c Include/*.h 
 MINI		:= -lX11 -lXext Include/minilibx-linux/libmlx_Linux.a
-CFLAGS		:= -Wall -Wextra -Werror
+CFLAGS		:= -Wall -Wextra -Werror -g3
 MLX_PATH	:= Include/minilibx-linux
 RM			:= rm -rf
 DIR_DUP     = mkdir -p $(@D)

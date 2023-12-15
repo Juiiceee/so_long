@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:02:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 13:56:01 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 14:07:20 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	main(int argc, char **argv)
 		inputarea(argv[1], &game);
 		if (!checkall(&game))
 			return (freetab(&game), 0);
-		checkpath(&game);
 		if (!game_init(&game))
 			return (freetab(&game), 0);
 		fillalltexture(game, game.game_obj.feca.fecaface);
@@ -37,5 +36,5 @@ int	main(int argc, char **argv)
 		freeall(&game);
 		return (0);
 	}
-	return (0);
+	return (error("Argument error"));
 }

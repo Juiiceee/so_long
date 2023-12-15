@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:13:54 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 18:19:15 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 15:26:12 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	mup(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
+	mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecados);
 }
 
@@ -53,6 +54,7 @@ void	mdown(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
+	mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecaface);
 }
 
@@ -75,6 +77,7 @@ void	mleft(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
+	mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecagauche);
 }
 
@@ -97,6 +100,7 @@ void	mright(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
+	mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecadroite);
 }
 

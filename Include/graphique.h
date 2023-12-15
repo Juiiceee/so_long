@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 13:28:41 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 15:19:44 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ typedef struct s_game_pos
 	int	x;
 	int	y;
 }	t_game_pos;
+
+typedef struct s_game_posbouf
+{
+	int	x;
+	int	y;
+}	t_game_posbouf;
 
 typedef struct s_game_chara
 {
@@ -74,6 +80,7 @@ typedef struct s_game
 	t_game_mesure	game_mesure;
 	t_game_obj		game_obj;
 	t_game_pos		game_pos;
+	t_game_posbouf	game_posbouf;
 	int				poub;
 }	t_game;
 
@@ -115,5 +122,8 @@ void	endgame(t_game *game);
 //bouftou.c
 int		settexturebouftou(t_game *game);
 void	filltexturebouftou(t_game game);
+void	putposbouf(t_game *game, int x, int y);
+void	mouvementbouftou(t_game *game);
+void	mouvgeneral(t_game *game, int x, int y);
 
 #endif

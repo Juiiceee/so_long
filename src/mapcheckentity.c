@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:10 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 10:46:09 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 14:37:40 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,11 @@ int	checkbouftou(t_game *game)
 		while (j < game->game_mesure.colonne)
 		{
 			if (game->area[i][j] == 'M')
+			{
+				game->game_posbouf.x = (int)j;
+				game->game_posbouf.y = i;
 				bouftou++;
+			}
 			j++;
 		}
 		i++;
