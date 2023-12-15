@@ -4,7 +4,7 @@
 - 0 = position vide
 - S = Sortie
 - F = Feca
-- R = Roublard
+- M = Bouftou
 - D = Dofus
 
 ### Input controle
