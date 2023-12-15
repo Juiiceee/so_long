@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 15:57:01 by lbehr             #+#    #+#              #
-#    Updated: 2023/12/14 18:21:37 by lbehr            ###   ########.fr        #
+#    Updated: 2023/12/15 10:39:52 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,12 +48,12 @@ clean	:
 fclean	:	clean
 	$(RM) $(NAME)
 	
-ffclean	:	fclean
+git	:	fclean
 	$(RM) $(MLX_PATH)
 	$(RM) bin
 
 re		:	fclean all
 
-rall	:	ffclean all
+rall	:	git all
 
-.PHONY: all clean fclean ffclean re rall
+.PHONY: all clean fclean git re rall
