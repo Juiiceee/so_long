@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:29 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 18:24:18 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:31:28 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	fillalltexture(t_game game, void *chara)
 	filltextureempty(game);
 	filltexturedofus(game);
 	filltexturefeca(game, chara);
+	filltexturebouftou(game);
 	mlx_string_put(game.mlx, game.win, game.game_mesure.width - 40,
 		25, create_trgb(0, 0, 0, 0), str);
 	free(str);
@@ -81,6 +82,8 @@ int	settexture(t_game *game)
 		return (error("Probleme avec la texture case_vide"));
 	game->nbtexture++;
 	if (!settexturechara(game))
+		return (0);
+	if (!settexturebouftou(game))
 		return (0);
 	return (1);
 }

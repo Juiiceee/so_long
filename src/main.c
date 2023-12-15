@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:02:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 18:13:23 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:31:00 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 int	main(int argc, char **argv)
 {
 	t_game	game;
+	/*int	argc = 2;
+	char	*argv[] = {"sa", "../tsrc/map/valide/mapcool.ber"};*/
 
 	if (argc == 2)
 	{
-		if (!checkextension(argv[1]))
-			return (0);
+		/*if (!checkextension(argv[1]))
+			return (0);*/
 		game.game_mesure.ligne = repsize(argv[1], &game.game_mesure.colonne);
 		if (game.game_mesure.ligne < 0)
 			return (error("La saisie n'est pas un rectangle"));

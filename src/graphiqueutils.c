@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:34 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 14:39:10 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:34:42 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	destroytexture(t_game *game)
 	mlx_destroy_image(game->mlx, game->game_obj.dofus);
 	mlx_destroy_image(game->mlx, game->game_obj.mur);
 	mlx_destroy_image(game->mlx, game->game_obj.empty);
+	mlx_destroy_image(game->mlx, game->game_obj.bouftou);
 }
 
 void	freetab(t_game *game)
@@ -73,4 +74,6 @@ void	destroytexturem(t_game *game)
 		mlx_destroy_image(game->mlx, game->game_obj.feca.fecagauche);
 	if (game->nbtexture > 7)
 		mlx_destroy_image(game->mlx, game->game_obj.feca.fecados);
+	if (game->nbtexture > 8)
+		mlx_destroy_image(game->mlx, game->game_obj.bouftou);
 }

@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 18:19:33 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:28:41 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct s_game_obj
 	int				nbdofuscpy;
 	void			*mur;
 	void			*empty;
+	void			*bouftou;
 }	t_game_obj;
 
 typedef struct s_game_mesure
@@ -86,9 +87,9 @@ void	filltexturefeca(t_game game, void *chara);
 //graphique.c
 void	fillalltexture(t_game game, void *chara);
 void	calculmap(int ligne, int colonne, int *width, int *height);
+int		game_init(t_game *game);
 int		settexturechara(t_game *game);
 int		settexture(t_game *game);
-int		game_init(t_game *game);
 
 //graphiqueutils.c
 void	freeall(t_game *game);
@@ -110,5 +111,9 @@ int		closecross(t_game *game);
 int		iswall(char c);
 int		issortie(t_game game, char c, int i);
 void	endgame(t_game *game);
+
+//bouftou.c
+int		settexturebouftou(t_game *game);
+void	filltexturebouftou(t_game game);
 
 #endif
