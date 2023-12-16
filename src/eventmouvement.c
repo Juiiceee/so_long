@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:13:54 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 15:26:12 by lbehr            ###   ########.fr       */
+/*   Updated: 2023/12/16 18:29:32 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	mleft(t_game *game)
 	mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecagauche);
 }
-
+//
 void	mright(t_game *game)
 {
 	if (game->area[game->game_pos.y][game->game_pos.x + 1] == 'W'
