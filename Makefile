@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 15:57:01 by lbehr             #+#    #+#              #
-#    Updated: 2023/12/15 16:31:52 by lbehr            ###   ########.fr        #
+#    Updated: 2024/01/09 15:14:04 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ DIR_DUP     = mkdir -p $(@D)
 all		: norm $(MLX_PATH) $(NAME)
 
 $(MLX_PATH):
-	git clone git@github.com:42Paris/minilibx-linux.git Include/minilibx-linux;
+	git clone git@github.com:42Paris/minilibx-linux.git Include/minilibx-linux
 
 norm	:
 	$(NORM)
