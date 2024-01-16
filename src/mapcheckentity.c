@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:10 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 14:37:40 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 16:11:06 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ int	checkbouftou(t_game *game)
 
 	i = 0;
 	bouftou = 0;
+	game->game_posbouf.x = -1;
+	game->game_posbouf.y = -1;
 	while (i < game->game_mesure.ligne)
 	{
 		j = 0;

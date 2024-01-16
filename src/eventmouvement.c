@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:13:54 by lbehr             #+#    #+#             */
-/*   Updated: 2024/01/16 15:11:49 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 16:13:48 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void	mup(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
-	mouvementbouftou(game);
+	if (!(game->game_posbouf.x == -1 && game->game_posbouf.y == -1))
+		mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecados);
 }
 
@@ -58,7 +59,8 @@ void	mdown(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
-	mouvementbouftou(game);
+	if (!(game->game_posbouf.x == -1 && game->game_posbouf.y == -1))
+		mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecaface);
 }
 
@@ -83,7 +85,8 @@ void	mleft(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
-	mouvementbouftou(game);
+	if (!(game->game_posbouf.x == -1 && game->game_posbouf.y == -1))
+		mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecagauche);
 }
 
@@ -108,7 +111,8 @@ void	mright(t_game *game)
 	}
 	game->nbmouv++;
 	ft_printf("Tu as fait %d mouvements\n", game->nbmouv);
-	mouvementbouftou(game);
+	if (!(game->game_posbouf.x == -1 && game->game_posbouf.y == -1))
+		mouvementbouftou(game);
 	fillalltexture(*game, game->game_obj.feca.fecadroite);
 }
 

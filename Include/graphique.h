@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2024/01/16 15:09:34 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 16:07:10 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ typedef struct s_game
 	char			**areacpy;
 	int				nbmouv;
 	int				nbtexture;
+	int				nbbouftou;
 	t_game_mesure	game_mesure;
 	t_game_obj		game_obj;
 	t_game_pos		game_pos;
