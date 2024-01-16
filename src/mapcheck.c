@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:50 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 16:02:39 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 15:20:52 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int	checkextension(char	*str)
 	ext = ft_strdup(".ber");
 	cb = 0;
 	i = 0;
+	if (str[i] == '.')
+		i++;
 	while (str[i] != '.')
 		i++;
 	while (str[i + cb] == ext[cb] && str[i + cb] && ext[cb])

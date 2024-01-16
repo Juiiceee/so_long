@@ -57,5 +57,26 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+mapcheck
+get_next_line_utils
+get_next_line
+map
+map_utils
+mapcheckentity
+texture
+graphique
+graphiqueutils
+event
+allprint
+ft_printf
+printhex
+printint
+printptr
+printstr
+main
+eventmouvement
+mapcheckpath
+bouftou
+
 minilibx-linux
 //!minilibx-linux/*

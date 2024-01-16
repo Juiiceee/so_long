@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:13 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 15:19:44 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 15:09:34 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ int		key(int keycode, t_game *game);
 int		closecross(t_game *game);
 int		iswall(char c);
 int		issortie(t_game game, char c, int i);
-void	endgame(t_game *game);
+void	endgame(t_game *game, int i);
 
 //bouftou.c
 int		settexturebouftou(t_game *game);

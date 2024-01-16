@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:18 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 17:25:47 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 15:08:31 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,20 +47,25 @@ int	issortie(t_game game, char c, int i)
 	return (0);
 }
 
-void	endgame(t_game *game)
+void	endgame(t_game *game, int i)
 {
-	game->nbmouv++;
-	if (game->nbmouv <= 30)
+	if (i == 0)
 	{
-		ft_printf("GG tu as trouve la sortie en seulement");
-		ft_printf(" %d coups\n", game->nbmouv);
+		game->nbmouv++;
+		if (game->nbmouv <= 30)
+		{
+			ft_printf("GG tu as trouve la sortie en seulement");
+			ft_printf(" %d coups\n", game->nbmouv);
+		}
+		else if (game->nbmouv <= 60)
+			ft_printf("GG tu as trouve la sortie en %d coups\n", game->nbmouv);
+		else if (game->nbmouv >= 61)
+		{
+			ft_printf("Ouais tu as trouve la sortie	tu as un peu force avec");
+			ft_printf(" tes %d coups\n", game->nbmouv);
+		}
 	}
-	else if (game->nbmouv <= 60)
-		ft_printf("GG tu as trouve la sortie en %d coups\n", game->nbmouv);
-	else if (game->nbmouv >= 61)
-	{
-		ft_printf("Ouais tu as trouve la sortie	tu as un peu force avec");
-		ft_printf(" tes %d coups\n", game->nbmouv);
-	}
+	else if (i == 1)
+		ft_printf("Tu es mort ecrase par le bouftou!");
 	freeall(game);
 }

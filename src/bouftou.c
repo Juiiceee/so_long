@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 12:58:40 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/15 16:10:19 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/16 15:18:03 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,11 @@ void	filltexturebouftou(t_game game)
 
 void	mouvementbouftou(t_game *game)
 {
-	int	i;
-
-	i = 0;
+	if (game->area[game->game_posbouf.y][game->game_posbouf.x + 1] == 'F'
+	|| game->area[game->game_posbouf.y - 1][game->game_posbouf.x] == 'F'
+	|| game->area[game->game_posbouf.y][game->game_posbouf.x - 1] == 'F'
+	|| game->area[game->game_posbouf.y + 1][game->game_posbouf.x] == 'F')
+		endgame(game, 1);
 	if (game->area[game->game_posbouf.y][game->game_posbouf.x + 1] == '0')
 		mouvgeneral(game, game->game_posbouf.x + 1, game->game_posbouf.y);
 	else if (game->area[game->game_posbouf.y - 1][game->game_posbouf.x] == '0')
