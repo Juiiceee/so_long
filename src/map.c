@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:45 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 14:45:09 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/17 12:47:56 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,13 @@ void	inputarea(char *map, t_game *game)
 		i++;
 	}
 	close(fd);
+}
+
+int	checksize(t_game game)
+{
+	if (game.game_mesure.ligne < 0)
+		return (error("La saisie n'est pas un rectangle"));
+	else if (game.game_mesure.colonne > 38 || game.game_mesure.ligne > 20)
+		return (error("La saisie est trop grande pour l'ecran"));
+	return (1);
 }

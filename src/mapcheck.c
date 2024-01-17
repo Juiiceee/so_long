@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:14:50 by lbehr             #+#    #+#             */
-/*   Updated: 2024/01/16 15:20:52 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/17 10:34:13 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ int	checkall(t_game *game)
 		good = error("Dofus error");
 	if (!checkbouftou(game))
 		good = error("Bouftou error");
-	if (!checkpath(game))
-		good = error("Tout les collectibles ne sont pas accessibles");
 	return (good);
 }
 

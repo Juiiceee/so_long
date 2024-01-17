@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:02:13 by lbehr             #+#    #+#             */
-/*   Updated: 2024/01/16 15:30:37 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/17 12:47:05 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ int	main(int argc, char **argv)
 		if (!checkextension(argv[1]))
 			return (0);
 		game.game_mesure.ligne = repsize(argv[1], &game.game_mesure.colonne);
-		if (game.game_mesure.ligne < 0)
-			return (error("La saisie n'est pas un rectangle"));
+		if (!checksize(game))
+			return (0);
 		inputarea(argv[1], &game);
 		if (!checkall(&game))
 			return (freetab(&game), 0);
+		if (!checkpath(&game))
+			return (freetab(&game), error("Collectible non accessible"));
 		if (!game_init(&game))
 			return (freetab(&game), 0);
 		fillalltexture(game, game.game_obj.feca.fecaface);

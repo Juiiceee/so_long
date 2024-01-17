@@ -6,7 +6,7 @@
 /*   By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:15:19 by lbehr             #+#    #+#             */
-/*   Updated: 2023/12/14 17:56:33 by lbehr            ###   ########.fr       */
+/*   Updated: 2024/01/17 12:47:26 by lbehr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 size_t	repsize(char *map, size_t *colonne);
 char	**createarea(int ligne, size_t colonne);
 void	inputarea(char *map, t_game *game);
+int		checksize(t_game game);
 
 //mapcheck.c + strdup
 int		checkmur(t_game *game);
