@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 15:57:01 by lbehr             #+#    #+#              #
-#    Updated: 2024/01/17 12:40:47 by lbehr            ###   ########.fr        #
+#    Updated: 2024/01/17 12:55:15 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,8 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(DIR_DUP)
 	$(CC) -c $< $(CFLAGS) -o $@
 
+bonus	:	all
+
 clean	:
 	$(RM) $(OBJS)
 	$(RM) $(OBJ_DIR)
@@ -56,4 +58,4 @@ re		:	fclean all
 
 rall	:	git all
 
-.PHONY: all clean fclean git re rall
+.PHONY: all clean fclean git re rall bonus
